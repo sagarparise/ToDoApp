@@ -10,16 +10,43 @@
 </head>
 <body>
   <div class="container">
+
+   <div class="top-sec">
     <div class="todo-app">
-      <h2>To Do List <img src="assets/checklist.png" width="40px" alt=""></h2>
+      <h1><img src="assets/rocket.svg" width="40px" height="50px" alt=""><span id="app-name">todo</span></h1>
       <div class="row">
-        <input type="text" class="search-bar" placeholder="Add Your Text">
-        <button class="btn">Add</button>
+        <input type="text" class="search-bar" placeholder="Enter Your To-do List Task">
+        <button class="btn">Add <i class='bx bx-plus-circle'></i></button>
       </div>
-      <ul id="list-container">
-       
-      </ul>
+    </div> 
     </div>
+
+    <div class="bottom-sec">
+      <div class="sub-list-head">
+        <div class="corner">
+          <p class="corner-text">To-Do-list</p>
+          <p class="number right-number"></p>
+        </div>
+        <div class="corner">
+          <p class="corner-text">High Priority</p>
+          <p class="number"></p>
+        </div>
+      </div>
+     
+
+      <div class="list-box">
+        <div class="no-item-text">
+          <div>
+            <img src="assets/Clipboard.png" width="50px">
+          <p>You have no To-do Items As of now</p>
+          </div>
+        </div>
+        <ul id="list-container">
+      
+        </ul>
+      </div>
+    </div>
+
   </div> 
   <script src="script.js"></script>
 </body>
