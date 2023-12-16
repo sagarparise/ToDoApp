@@ -42,6 +42,10 @@ listContainer.addEventListener("click", function(e){
     e.target.parentElement.remove();
     saveData();
     digit--;
+    if(digit === 0)
+    {
+      textVisible();
+    }
     updateNumber(digit);
   }
 }, false);
