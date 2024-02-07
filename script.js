@@ -12,10 +12,16 @@ button.addEventListener("click", ()=>{
   
    let li = document.createElement("li");
    li.innerHTML = searchBar.value;
+   
    listContainer.appendChild(li);
    let span = document.createElement("span");
+   let edit = document.createElement('p')
+   span.className = "delete";
+   edit.className = "edit";
+   edit.innerHTML = '&#x270E;'
    span.innerHTML = "\u00d7"
-   li.appendChild(span);  
+ 
+   li.append(edit,span);  
    textVisible();
    digit++;
    updateNumber(digit);
@@ -63,7 +69,7 @@ function textVisible(){
 }
 
 function updateNumber(digit) {
-  if(digit>=0)
+  if(digit >= 0)
   {
     number.innerHTML = digit;
   }
@@ -87,6 +93,17 @@ function showTask() {
   textVisible();
  
 }
+// edit options
+listContainer.addEventListener("click",(event) => {
+  if(event.target.classList.contains("edit"))
+  {
+    const listItem = event.target.parentElement;
+    // Get the text content of the list item
+    const textContent = listItem.firstChild.textContent;
+    textContent.contentEditable = true;
+    
+  }
+})
 
 showTask();
 
